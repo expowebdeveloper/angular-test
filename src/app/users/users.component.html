@@ -1,0 +1,22 @@
+<h1>Users</h1> 
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 30%">Id</th>
+            <th style="width: 30%">Name</th>
+            <th style="width: 30%">Salary</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td> 
+            <td>{{user.employee_name}}</td>
+            <td>{{user.employee_salary}}</td> 
+        </tr>
+        <tr *ngIf="!users">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>
